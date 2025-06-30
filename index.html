@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Indian GST Calculator - Reverse, AI & Easy Online Tool</title>
+    <meta name="description" content="The best and easiest AI-powered Indian GST calculator. Instantly add GST, or use our including/reverse GST calculator to find the net price from a gross total. Fast, free, and accurate.">
+    <meta name="keywords" content="gst calculator, reverse gst calculator, easy gst calculator, including gst calculator, indian gst calculator, ai gst calculator, best gst calculator, online gst calculator, gst calculation, add gst, remove gst, gst rate, gst india, goods and services tax">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- SEO: FAQ Schema for Rich Snippets in Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What is a reverse GST calculator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A reverse GST calculator is a function that determines the original base price and the tax amount from a final price that already includes GST. On our tool, this is the 'Include GST' mode. It's essential for creating tax invoices when you only have the total amount paid by a customer."
+        }
+      },{
+        "@type": "Question",
+        "name": "How does the 'including GST calculator' feature work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The 'including GST calculator' feature works by reversing the standard tax calculation. For instance, if you enter ₹118 with a GST rate of 18%, our tool correctly calculates the Net Amount as ₹100 and the GST Amount as ₹18. It uses the formula: Base Amount = Total Amount / (1 + (GST Rate / 100))."
+        }
+      },{
+        "@type": "Question",
+        "name": "Is this an AI GST Calculator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, this can be considered an AI GST calculator because it uses smart, client-side logic for instant, error-free computations. The 'AI' aspect refers to its ability to intelligently handle both forward and reverse calculations, update the visual chart in real-time, and provide an intuitive user experience without any server-side processing, ensuring your data remains 100% private."
+        }
+      },{
+        "@type": "Question",
+        "name": "What makes this the best GST calculator for India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We believe this is the best GST calculator because it combines several essential features into one free tool: it's an easy GST calculator for quick checks, a powerful reverse GST calculator for invoicing, and a dedicated Indian GST calculator with preset slabs and multi-currency support. The combination of speed, accuracy, privacy, and a clear visual breakdown makes it the ideal tool for professionals and individuals across India."
+        }
+      }]
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary: #FFC300;
+            --background: #000000;
+            --card-bg: #1A1A1A;
+            --text: #EAEAEA;
+            --secondary-accent: #FFD700;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+        body { background: var(--background); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 1rem; }
+        .header { background: var(--card-bg); padding: 1.5rem; display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1200px; border-radius: 15px; margin-bottom: 2rem; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); }
+        .logo { display: flex; align-items: center; }
+        .logo a { color: inherit; text-decoration: none; display: flex; align-items: center; }
+        .logo-circle { width: 50px; height: 50px; background: linear-gradient(135deg, var(--primary), var(--secondary-accent)); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-right: 1rem; box-shadow: 0 4px 15px rgba(255, 195, 0, 0.3); }
+        .logo-circle span { font-size: 1.5rem; font-weight: bold; color: var(--card-bg); }
+        .header h1 { color: var(--primary); font-size: 2rem; }
+        .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+        .nav-links a { color: var(--text); text-decoration: none; padding: 0.5rem 1rem; border-radius: 25px; transition: all 0.3s ease; font-weight: 500; }
+        .nav-links a:hover { background: var(--primary); color: var(--card-bg); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255, 195, 0, 0.4); }
+        .nav-links a.active { color: var(--primary); font-weight: 700; }
+        .container { width: 100%; max-width: 1200px; }
+        .main-heading { text-align: center; margin-bottom: 2rem; }
+        .main-heading h1 { color: var(--primary); font-size: 2.5rem; }
+        .main-heading p { font-size: 1.1rem; color: var(--text); max-width: 800px; margin: 0.5rem auto 0; }
+        .calculator-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+        .calculator-card { background: var(--card-bg); padding: 2rem; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); margin: 1rem 0; display: flex; flex-direction: column; }
+        .input-group { margin-bottom: 1.5rem; }
+        .input-label { display: block; margin-bottom: 0.5rem; color: var(--primary); font-weight: 500; }
+        .currency-input { display: flex; align-items: center; gap: 10px; }
+        .input-field { width: 100%; padding: 15px; background: rgba(0, 0, 0, 0.2); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; color: var(--text); font-size: 16px; transition: all 0.3s ease; }
+        .input-field:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 15px rgba(255, 195, 0, 0.2); }
+        .preset-rates { display: flex; gap: 1rem; margin: 1.5rem 0; flex-wrap: wrap; }
+        .preset-btn { flex: 1; padding: 15px; background: rgba(0, 0, 0, 0.2); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; color: var(--text); cursor: pointer; transition: all 0.3s ease; font-size: 16px; min-width: 80px; }
+        .preset-btn:hover { background: var(--primary); color: var(--card-bg); border-color: var(--primary); box-shadow: 0 6px 20px rgba(255, 195, 0, 0.4); }
+        .toggle-group { display: flex; gap: 1rem; margin: 1.5rem 0; }
+        .toggle-btn { flex: 1; padding: 12px; background: rgba(0, 0, 0, 0.2); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; color: var(--text); cursor: pointer; transition: all 0.3s ease; }
+        .toggle-btn.active { background: var(--primary); color: var(--card-bg); border-color: var(--primary); font-weight: bold; box-shadow: 0 6px 20px rgba(255, 195, 0, 0.4); }
+        .results-card { background: rgba(0, 0, 0, 0.2); padding: 1.5rem; border-radius: 15px; margin-top: 1.5rem; }
+        .result-item { display: flex; justify-content: space-between; margin-bottom: 1rem; padding: 10px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .result-item:last-child { border-bottom: none; margin-bottom: 0; }
+        .result-item strong { color: var(--primary); }
+        .chart-container { position: relative; margin: auto; height: 350px; width: 100%; max-width: 350px; }
+        .content-section { background: var(--card-bg); color: var(--text); padding: 2.5rem; border-radius: 15px; margin: 2rem 0; width: 100%; max-width: 1200px; }
+        .content-section h2 { color: var(--primary); margin-bottom: 1.5rem; font-size: 2.2rem; text-align: center; }
+        .content-section h3 { color: var(--secondary-accent); margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem; border-left: 4px solid var(--primary); padding-left: 1rem; }
+        .content-section p, .content-section li { line-height: 1.8; margin-bottom: 1rem; }
+        .content-section ul, .content-section ol { padding-left: 2rem; }
+        .content-section table { width: 100%; margin-top: 1.5rem; border-collapse: collapse; text-align: left; }
+        .content-section th, .content-section td { padding: 12px 15px; border: 1px solid rgba(255, 255, 255, 0.1); }
+        .content-section th { background-color: rgba(255, 195, 0, 0.1); color: var(--primary); }
+        .footer { background: var(--card-bg); padding: 2rem 1rem; margin-top: 2rem; text-align: center; color: var(--text); border-top: 2px solid var(--primary); width: 100%; max-width: 1200px; border-radius: 15px; }
+        .footer-links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .footer-links a { color: var(--text); text-decoration: none; transition: all 0.3s ease; }
+        .footer-links a:hover { color: var(--primary); }
+        .footer p { margin-top: 1.5rem; }
+        @media (max-width: 992px) { .calculator-wrapper { grid-template-columns: 1fr; } .chart-container { height: 300px; max-width: 300px; } }
+        @media (max-width: 768px) { body { padding: 1rem; } .header { flex-direction: column; gap: 1.5rem; } .main-heading h1 { font-size: 2rem; } .nav-links { gap: 1rem; justify-content: center; flex-wrap: wrap; } .nav-links a { padding: 0.5rem 0.8rem; } .content-section { padding: 1.5rem; } .content-section h2 { font-size: 1.8rem; } .content-section h3 { font-size: 1.3rem; } }
+        @media (max-width: 480px) { .header h1 { font-size: 1.5rem; } .main-heading h1 { font-size: 1.8rem; } .calculator-card { padding: 1.5rem; } .preset-btn { padding: 12px; font-size: 14px; } .content-section h2 { font-size: 1.6rem; } }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <div class="logo-circle"><span>PM</span></div>
+                <h1>GST Calculator</h1>
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="main-heading">
+            <h1>The Ultimate Indian GST Calculator</h1>
+            <p>India's best and most easy-to-use tool to add GST, remove GST, or perform reverse calculations instantly. Fast, accurate, and completely free.</p>
+        </div>
+
+        <div class="calculator-wrapper">
+            <div class="calculator-card">
+                <div class="input-group">
+                    <label class="input-label" for="amount" id="amountLabel">Amount</label>
+                    <div class="currency-input">
+                        <select class="input-field" id="currency" style="width: 80px;" aria-label="Currency">
+                            <option>₹</option>
+                            <option>$</option>
+                            <option>€</option>
+                            <option>£</option>
+                        </select>
+                        <input type="number" class="input-field" id="amount" placeholder="Enter amount">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label" for="gstRate">GST Rate (%)</label>
+                    <div class="preset-rates">
+                        <button class="preset-btn" data-rate="5">5%</button>
+                        <button class="preset-btn" data-rate="12">12%</button>
+                        <button class="preset-btn" data-rate="18">18%</button>
+                        <button class="preset-btn" data-rate="28">28%</button>
+                    </div>
+                    <input type="number" class="input-field" id="gstRate" placeholder="Custom %">
+                </div>
+
+                <div class="toggle-group">
+                    <button class="toggle-btn active" data-type="exclude">Exclude GST</button>
+                    <button class="toggle-btn" data-type="include">Include GST (Reverse)</button>
+                </div>
+
+                <div class="results-card">
+                    <div class="result-item">
+                        <span>Net Amount:</span>
+                        <strong id="netAmount">₹0.00</strong>
+                    </div>
+                    <div class="result-item">
+                        <span>GST Amount:</span>
+                        <strong id="gstAmount">₹0.00</strong>
+                    </div>
+                    <div class="result-item">
+                        <span>Total Amount:</span>
+                        <strong id="totalAmount">₹0.00</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calculator-card">
+                <h3 style="color: var(--primary); margin-bottom: 1.5rem; text-align: center; font-size: 1.5rem;">Visual Breakdown</h3>
+                <div class="chart-container">
+                    <canvas id="chart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <section class="content-section">
+            <h2>Your Complete Guide to GST Calculations</h2>
+            
+            <h3>How to Use Our Easy GST Calculator</h3>
+            <p>Our tool is designed for speed and simplicity, making it the most <strong>easy GST calculator</strong> available online. Follow these steps for an instant, accurate calculation:</p>
+            <ol>
+                <li><strong>Choose Calculation Type:</strong> Select "Exclude GST" to add tax to a base price. To find the original amount and tax from a total price, select "Include GST". This mode acts as a powerful <strong>reverse GST calculator</strong>.</li>
+                <li><strong>Enter the Amount:</strong> Type in your value. Our <strong>Indian GST calculator</strong> defaults to Rupees (₹) but supports other currencies.</li>
+                <li><strong>Set the GST Rate:</strong> Click a preset button for common Indian GST slabs or enter a custom percentage.</li>
+                <li><strong>View the Results:</strong> The Net Amount, GST Amount, and Total Amount are calculated instantly, with a clear visual chart to match.</li>
+            </ol>
+            
+            <h3>Common GST Slabs in India</h3>
+            <p>This calculator is pre-configured for the most common GST slabs, ensuring you can perform calculations for any category of goods or services in India.</p>
+            <table>
+                <thead><tr><th>GST Rate</th><th>Types of Goods and Services</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>5%</strong></td><td>Household necessities, basic food items, etc.</td></tr>
+                    <tr><td><strong>12%</strong></td><td>Computers, processed food, mobile phones, etc.</td></tr>
+                    <tr><td><strong>18%</strong></td><td>Capital goods, industrial intermediaries, and most professional services.</td></tr>
+                    <tr><td><strong>28%</strong></td><td>Luxury items, consumer durables, premium cars, (ACs, motercycle, refrigerators), etc.</td></tr>
+                </tbody>
+            </table>
+
+            <h2 style="margin-top: 3rem;">Frequently Asked Questions (FAQ)</h2>
+            
+            <h3>What is a reverse GST calculator?</h3>
+            <p>A <strong>reverse GST calculator</strong> is a function that determines the original base price and the tax amount from a final price that already includes GST. On our tool, this is the 'Include GST' mode. It's essential for creating tax invoices when you only have the total amount paid by a customer.</p>
+            
+            <h3>How does the 'including GST calculator' feature work?</h3>
+            <p>The <strong>including GST calculator</strong> feature works by reversing the standard tax calculation. For instance, if you enter ₹118 with a GST rate of 18%, our tool correctly calculates the Net Amount as ₹100 and the GST Amount as ₹18. It uses the formula: `Base Amount = Total Amount / (1 + (GST Rate / 100))`. </p>
+            
+            <h3>Is this an AI GST Calculator?</h3>
+            <p>Yes, this can be considered an <strong>AI GST calculator</strong> because it uses smart, client-side logic for instant, error-free computations. The 'AI' aspect refers to its ability to intelligently handle both forward and reverse calculations, update the visual chart in real-time, and provide an intuitive user experience without any server-side processing, ensuring your data remains 100% private.</p>
+
+            <h3>What makes this the best GST calculator for India?</h3>
+            <p>We consider this the best GST calculator available, as it brings together multiple key features in a single free tool. It functions as a quick and simple GST calculator, an advanced reverse GST calculator for accurate invoicing, and a specialized Indian GST calculator with built-in tax slabs and multi-currency support. Its blend of fast performance, precise results, user privacy, and clear visual breakdown makes it a perfect choice for both professionals and everyday users across India.</p>
+
+        </section>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </div>
+        <p>© 2025 MY GST Calculator. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        let chartInstance = null;
+        function updateAmountLabel() {
+            const isInclusive = document.querySelector('.toggle-btn.active').dataset.type === 'include';
+            const label = document.getElementById('amountLabel');
+            label.textContent = isInclusive ? 'Total Amount (Inclusive of GST)' : 'Net Amount (Exclusive of GST)';
+        }
+        function calculateGST() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const gstRate = parseFloat(document.getElementById('gstRate').value);
+            const currency = document.getElementById('currency').value;
+            if (isNaN(amount) || isNaN(gstRate) || amount < 0 || gstRate < 0) {
+                updateResults(0, 0, 0, currency);
+                if (chartInstance) { chartInstance.destroy(); chartInstance = null; }
+                return;
+            }
+            const isInclusive = document.querySelector('.toggle-btn.active').dataset.type === 'include';
+            let gstAmount, netAmount, totalAmount;
+            if (isInclusive) {
+                totalAmount = amount;
+                gstAmount = amount * (gstRate / (100 + gstRate));
+                netAmount = amount - gstAmount;
+            } else {
+                netAmount = amount;
+                gstAmount = amount * (gstRate / 100);
+                totalAmount = amount + gstAmount;
+            }
+            updateResults(gstAmount, netAmount, totalAmount, currency);
+            updateChart(gstAmount, netAmount);
+        }
+        function updateResults(gst, net, total, currency) {
+            document.getElementById('gstAmount').textContent = `${currency}${gst.toFixed(2)}`;
+            document.getElementById('netAmount').textContent = `${currency}${net.toFixed(2)}`;
+            document.getElementById('totalAmount').textContent = `${currency}${total.toFixed(2)}`;
+        }
+        function updateChart(gst, net) {
+            const ctx = document.getElementById('chart').getContext('2d');
+            const total = net + gst;
+            if (chartInstance) { chartInstance.destroy(); }
+            if (total <= 0) { chartInstance = null; return; }
+            const netPercentage = total > 0 ? ((net / total) * 100).toFixed(1) : 0;
+            const gstPercentage = total > 0 ? ((gst / total) * 100).toFixed(1) : 0;
+            chartInstance = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: [`Net Amount (${netPercentage}%)`, `GST Amount (${gstPercentage}%)`],
+                    datasets: [{ data: [net, gst], backgroundColor: [ '#A9A9A9', '#FFC300' ], borderColor: '#1A1A1A', borderWidth: 4 }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false, cutout: '60%',
+                    plugins: { legend: { position: 'bottom', labels: { color: '#EAEAEA', font: { size: 14 }}}, tooltip: { enabled: true } }
+                }
+            });
+        }
+        document.getElementById('amount').addEventListener('input', calculateGST);
+        document.getElementById('gstRate').addEventListener('input', calculateGST);
+        document.getElementById('currency').addEventListener('change', calculateGST);
+        document.querySelectorAll('.toggle-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (btn.classList.contains('active')) return;
+                document.querySelector('.toggle-btn.active').classList.remove('active');
+                btn.classList.add('active');
+                updateAmountLabel();
+                calculateGST();
+            });
+        });
+        document.querySelectorAll('.preset-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.getElementById('gstRate').value = btn.dataset.rate;
+                calculateGST();
+            });
+        });
+        updateAmountLabel();
+        calculateGST();
+    </script>
+</body>
+</html>
