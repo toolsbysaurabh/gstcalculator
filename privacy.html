@@ -17,7 +17,7 @@
             --secondary-accent: #FFD700;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
-        body { background: var(--background); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 1rem; }
+        body { background: var(--background); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 1rem; font-size: 16px; }
         .header { background: var(--card-bg); padding: 1.5rem; display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1200px; border-radius: 15px; margin-bottom: 2rem; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); }
         .logo { display: flex; align-items: center; }
         .logo a { color: inherit; text-decoration: none; display: flex; align-items: center; }
@@ -37,7 +37,7 @@
         .footer-links a:hover { color: var(--primary); }
         .footer p { margin-top: 1.5rem; }
         
-        /* === RESPONSIVE STYLES (Corrected) === */
+        /* === RESPONSIVE STYLES (Fully Corrected) === */
         @media (max-width: 768px) {
             body { padding: 1rem; }
             .header { flex-direction: column; gap: 1.5rem; }
@@ -47,18 +47,17 @@
             .content-page { padding: 1.5rem; }
             .content-page h2 { font-size: 1.8rem; }
             .content-page h3 { font-size: 1.3rem; }
-            .content-page p { line-height: 1.7; }
         }
         @media (max-width: 480px) {
-            .header h1 { font-size: 1.5rem; }
-            .content-page h2 { font-size: 1.6rem; }
-            .content-page h3 { font-size: 1.2rem; }
-            .content-page p {
-                font-size: 0.95rem;
-                line-height: 1.6;
-            }
+            .header h1 { font-size: 1.6rem; }
+            .content-page h2 { font-size: 1.7rem; }
+            .content-page h3 { font-size: 1.25rem; }
+            
+            /* Comprehensive fix for all small text on mobile */
+            .content-page p, .content-page li,
             .footer p, .footer-links a {
-                font-size: 0.9rem;
+                font-size: 15px; /* Ensures readable text on phones */
+                line-height: 1.6; /* Improves readability */
             }
         }
     </style>
