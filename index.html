@@ -103,9 +103,41 @@
         .footer-links a { color: var(--text); text-decoration: none; transition: all 0.3s ease; }
         .footer-links a:hover { color: var(--primary); }
         .footer p { margin-top: 1.5rem; }
-        @media (max-width: 992px) { .calculator-wrapper { grid-template-columns: 1fr; } .chart-container { height: 300px; max-width: 300px; } }
-        @media (max-width: 768px) { body { padding: 1rem; } .header { flex-direction: column; gap: 1.5rem; } .main-heading h1 { font-size: 2rem; } .nav-links { gap: 1rem; justify-content: center; flex-wrap: wrap; } .nav-links a { padding: 0.5rem 0.8rem; } .content-section { padding: 1.5rem; } .content-section h2 { font-size: 1.8rem; } .content-section h3 { font-size: 1.3rem; } }
-        @media (max-width: 480px) { .header h1 { font-size: 1.5rem; } .main-heading h1 { font-size: 1.8rem; } .calculator-card { padding: 1.5rem; } .preset-btn { padding: 12px; font-size: 14px; } .content-section h2 { font-size: 1.6rem; } }
+        
+        /* === RESPONSIVE STYLES (Corrected) === */
+        @media (max-width: 992px) {
+            .calculator-wrapper { grid-template-columns: 1fr; }
+            .chart-container { height: 300px; max-width: 300px; }
+        }
+        @media (max-width: 768px) {
+            body { padding: 1rem; }
+            .header { flex-direction: column; gap: 1.5rem; }
+            .header h1 { font-size: 1.8rem; }
+            .main-heading h1 { font-size: 2rem; }
+            .main-heading p { font-size: 1rem; }
+            .nav-links { gap: 1rem; justify-content: center; flex-wrap: wrap; }
+            .nav-links a { padding: 0.5rem 0.8rem; font-size: 0.95rem; }
+            .content-section { padding: 1.5rem; }
+            .content-section h2 { font-size: 1.8rem; }
+            .content-section h3 { font-size: 1.3rem; }
+            .content-section p, .content-section li { line-height: 1.7; }
+        }
+        @media (max-width: 480px) {
+            .header h1 { font-size: 1.5rem; }
+            .main-heading h1 { font-size: 1.8rem; }
+            .main-heading p { font-size: 0.95rem; }
+            .calculator-card { padding: 1.5rem; }
+            .preset-btn { padding: 12px; font-size: 14px; }
+            .content-section h2 { font-size: 1.6rem; }
+            .content-section h3 { font-size: 1.2rem; }
+            .content-section p, .content-section li {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+            .footer p, .footer-links a {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -232,7 +264,7 @@
             <a href="privacy.html">Privacy Policy</a>
             <a href="terms.html">Terms of Service</a>
         </div>
-        <p>© 2025 MY GST Calculator. All rights reserved.</p>
+        <p>© 2024 GST Calculator. All rights reserved.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
