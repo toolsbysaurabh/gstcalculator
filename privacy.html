@@ -36,8 +36,31 @@
         .footer-links a { color: var(--text); text-decoration: none; transition: all 0.3s ease; }
         .footer-links a:hover { color: var(--primary); }
         .footer p { margin-top: 1.5rem; }
-        @media (max-width: 768px) { body { padding: 1rem; } .header { flex-direction: column; gap: 1.5rem; } .nav-links { gap: 1rem; justify-content: center; flex-wrap: wrap; } .nav-links a { padding: 0.5rem 0.8rem; } .content-page { padding: 1.5rem; } .content-page h2 { font-size: 1.8rem; } .content-page h3 { font-size: 1.3rem; } }
-        @media (max-width: 480px) { .header h1 { font-size: 1.5rem; } .content-page h2 { font-size: 1.6rem; } }
+        
+        /* === RESPONSIVE STYLES (Corrected) === */
+        @media (max-width: 768px) {
+            body { padding: 1rem; }
+            .header { flex-direction: column; gap: 1.5rem; }
+            .header h1 { font-size: 1.8rem; }
+            .nav-links { gap: 1rem; justify-content: center; flex-wrap: wrap; }
+            .nav-links a { padding: 0.5rem 0.8rem; font-size: 0.95rem; }
+            .content-page { padding: 1.5rem; }
+            .content-page h2 { font-size: 1.8rem; }
+            .content-page h3 { font-size: 1.3rem; }
+            .content-page p { line-height: 1.7; }
+        }
+        @media (max-width: 480px) {
+            .header h1 { font-size: 1.5rem; }
+            .content-page h2 { font-size: 1.6rem; }
+            .content-page h3 { font-size: 1.2rem; }
+            .content-page p {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+            .footer p, .footer-links a {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
